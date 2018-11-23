@@ -1,0 +1,36 @@
+#include<stdio.h>
+#include<string.h>
+  main()
+{
+	int x,j=0,o;
+	char vk[100];
+	char kv[100];
+	printf("ENTER A STRING\n");
+	fgets(vk,100,stdin);
+	for(int i=0;i<100;i++)
+	{
+		if(vk[i]=='\0')
+		{
+			x=i;
+			break;
+		}
+		
+	}
+	for(int i=x-1;i>=0;i--)
+	{
+		kv[j]=vk[i];
+		j++;
+	}kv[j]='\0';
+	printf("REVERSE OF STRING IS%s\n",kv);
+	printf("orignal string is %s",vk);
+	if(strcmp(kv,vk)==0)
+	{
+		printf("STRING IS PALINDROME");
+	}
+	else
+	{
+		printf("STRING IS NOT PALINDROME");
+	}	
+	o= strcmp(kv,vk);
+	printf("%d",o);
+}
