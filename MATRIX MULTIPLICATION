@@ -1,0 +1,62 @@
+#include<stdio.h>
+main()
+{
+
+	int s=0;
+	int r1,r2,c1,c2;
+	printf("ENTER ROW AND COLUMN OF MATRIX 1\n");
+	scanf("%d %d",&r1,&c1);
+	printf("ENTER ROW AND COLUMN OF MATRIX 2\n");
+	scanf("%d %d",&r2,&c2);
+	int a[r1][c1];
+	int b[r2][c2];
+	int m[r2][c1];
+	if(c1==r2)
+	{	
+
+		printf("ENTER ELEMENTS OF 1ST ARRAY\n");
+		for(int i=0;i<r1;i++)
+		{
+			for(int j=0;j<c1;j++)
+			{
+			scanf("%d",&a[i][j]);
+			}
+		}
+		printf("ENTER ELEMENTS OF 2ND ARRAY\n");
+		for(int i=0;i<r2;i++)
+		{
+			for(int j=0;j<c2;j++)
+			{
+				scanf("%d",&b[i][j]);
+			
+			}
+		}
+	
+		for(int i=0;i<r1;i++)
+		{	
+			for(int j=0;j<c2;j++)
+				{	
+					for(int k=0;k<r2;k++)
+		    		s+=a[i][k]*b[k][j];	
+					m[i][j]=s;
+					s=0;
+				}
+		}
+		
+		
+		for(int i=0;i<r1;i++)
+			{	
+				for(int j=0;j<c2;j++)
+				{
+					printf("%d\t",m[i][j]);
+				}
+					printf("\n");
+				
+				
+			}
+		}
+		else
+		{		
+		printf("wrong input");
+		}
+}
