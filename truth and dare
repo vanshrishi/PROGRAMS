@@ -1,0 +1,73 @@
+#include<stdio.h>
+int main()
+{
+	int t,tr,dr,ts,ds,a=0,l=0;
+	scanf("%d",t);
+	while(t!=0)
+	{
+	scanf("%d",&tr);
+	int Tr[tr];
+	for(int i=0;i<tr;i++)
+	{
+		scanf("%d\t",&Tr[i]);
+	}
+	scanf("%d",&dr);
+	int Dr[dr];
+	for(int i=0;i<dr;i++)
+	{
+		scanf("%d\t",&Dr[i]);
+	}
+	scanf("%d",&ts);
+	int Ts[ts];
+	for(int  i=0;i<ts;i++)
+	{
+		scanf("%d\t",&Ts[i]);
+	}
+	scanf("%d\t",&ds);
+	int Ds[ds];
+	for(int i=0;i<ds;i++)
+	{
+		scanf("%d\t",&Ds[i]);
+	}
+	for(int k=0;k<ts;k++)
+	{
+			for(int v=0;v<tr;v++)
+			{
+			
+				if(Ts[k]==Tr[v])
+				{
+					a=1;
+				}
+				else
+				{
+					a=-1;
+				}
+		
+			}
+	}
+	for(int k=0;k<ds;k++)
+	{
+		for(int v=0;v<dr;v++)
+		{
+			if(Ds[k]==Dr[v])
+			{
+				l=1;
+			}
+			else
+			{
+				l=-1;
+			}
+		}
+	}
+	if(a==1&&l==1)
+	{
+		printf("yes\n");
+	}
+	else
+	{
+		printf("no\n");
+	}
+	
+	}
+	t--;
+}
